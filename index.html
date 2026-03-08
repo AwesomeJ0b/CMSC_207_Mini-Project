@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Jason Chua</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #eef0f5;
+      color: #1a1a2e;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── HERO CARD ── */
+    .hero-card {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, #ddd6fe 0%, #c7d2fe 50%, #bae6fd 100%);
+      border: 1px solid #c4b5fd;
+      border-radius: 20px;
+      padding: 48px;
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      flex-shrink: 0;
+    }
+
+    .hero-info {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .hero-info h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #2e1a6e;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .hero-info h1 span {
+      color: #6d28d9;
+    }
+
+    .hero-role {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6d28d9;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero-info p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4c3a7a;
+      max-width: 480px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      color: #5b21b6;
+    }
+
+    /* ── GRID ── */
+    .grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #dde0ea;
+      border-radius: 16px;
+      padding: 28px;
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: #a78bfa;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(167, 139, 250, 0.1);
+    }
+
+    .card-wide {
+      grid-column: span 2;
+    }
+
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a78bfa;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+      border: none;
+      padding: 0;
+      letter-spacing: -0.2px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: #666880;
+    }
+
+    .card p strong {
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+
+    /* ── ABOUT CARD ── */
+    #about-card {
+      grid-column: span 2;
+    }
+
+    /* ── HOBBIES ── */
+    .hobby-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .hobby-item {
+      background-color: #f4f5f9;
+      border: 1px solid #dde0ea;
+      border-radius: 10px;
+      padding: 16px;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .hobby-item:hover {
+      border-color: #a78bfa;
+      background-color: #faf9ff;
+    }
+
+    .hobby-item .icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .hobby-item h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
+    .hobby-item p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* ── FUN FACT CARD ── */
+    #funfact-card {
+      background-color: #faf9ff;
+      border-color: #d4c8fc;
+      text-align: center;
+    }
+
+    #fact-box {
+      background-color: #f4f5f9;
+      border: 1px solid #dde0ea;
+      border-radius: 10px;
+      padding: 22px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    #fact-text {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #666880;
+    }
+
+    #fact-btn {
+      padding: 11px 28px;
+      background-color: #a78bfa;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    #fact-btn:hover {
+      background-color: #9067f5;
+      transform: translateY(-2px);
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #1a1a2e;
+      background-color: #f4f5f9;
+      border: 1px solid #dde0ea;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .contact-links a:hover {
+      border-color: #a78bfa;
+      background-color: #faf9ff;
+    }
+
+    .contact-links a span {
+      font-size: 18px;
+      width: 26px;
+      text-align: center;
+    }
+
+    /* ── FOOTER ── */
+    .footer-text {
+      max-width: 900px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .footer-text span {
+      color: #a78bfa;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 16px 60px;
+      }
+
+      .hero-card {
+        padding: 28px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-info h1 {
+        font-size: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-wide,
+      #about-card {
+        grid-column: span 1;
+      }
+
+      .hobby-items {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Card -->
+  <div class="hero-card">
+    <img src="profile.jpg" alt="Photo of Job" class="avatar" style="object-fit: cover;">
+    <div class="hero-info">
+      <h1>Job Jason <span>Chua</span></h1>
+      <p class="hero-role">Data Engineer · Analyst · Grad Student</p>
+      <p>
+        Welcome to my personal web profile — built for CMSC 207, my first web development class.
+        I am a graduate student at the University of the Philippines with a background in
+        electrical engineering and a career in data systems and CRM.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">Python</span>
+        <span class="badge">Oracle SQL</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">CRM Systems</span>
+        <span class="badge">Registered Electrical Engineer</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Grid -->
+  <div class="grid">
+
+    <!-- About -->
+    <div class="card" id="about-card">
+      <p class="card-label">About Me</p>
+      <h2>Background</h2>
+      <p>
+        My name is <strong>Job Jason Chua</strong> and I am currently pursuing a postgraduate
+        degree in Computer Science at the <strong>University of the Philippines</strong>.
+        I completed my BS in Electrical Engineering at the <strong>University of Santo Tomas</strong>
+        and I am a licensed <strong>Registered Electrical Engineer</strong>.
+      </p>
+      <br>
+      <p>
+        I currently work as a <strong>CRM CDP Data Engineer</strong> at HC Consumer Finance
+        Philippines, where I manage data flows, customer segmentation, and system integrations.
+        I have been in the data and systems field since 2022 and enjoy bridging engineering
+        thinking with data-driven solutions.
+      </p>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="card card-wide">
+      <p class="card-label">Hobbies &amp; Interests</p>
+      <h2>What I Do Outside Work</h2>
+      <div class="hobby-items">
+        <div class="hobby-item">
+          <span class="icon">🥊</span>
+          <h3>Sports</h3>
+          <p>Gym, boxing, and table tennis keep me active and disciplined outside of work and school.</p>
+        </div>
+        <div class="hobby-item">
+          <span class="icon">📖</span>
+          <h3>Books</h3>
+          <p>I enjoy reading biographies. Real stories from real people give me a lot of perspective.</p>
+        </div>
+        <div class="hobby-item">
+          <span class="icon">🎵</span>
+          <h3>Music</h3>
+          <p>My playlist covers OPM, acoustic, jazz, and pop — something for every mood.</p>
+        </div>
+        <div class="hobby-item">
+          <span class="icon">🍜</span>
+          <h3>Food &amp; Tech</h3>
+          <p>I love exploring new food and keeping up with trends in modern technology.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fun Fact -->
+    <div class="card" id="funfact-card">
+      <p class="card-label">Fun Fact</p>
+      <h2>Get to Know Me</h2>
+      <div id="fact-box">
+        <p id="fact-text">Click the button to learn something about me!</p>
+      </div>
+      <button id="fact-btn" onclick="showFact()">Show a Fun Fact</button>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <p class="card-label">Contact</p>
+      <h2>Get in Touch</h2>
+      <div class="contact-links">
+        <a href="mailto:jobjasonchua@gmail.com">
+          <span>📧</span> jobjasonchua@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/job-jason-chua-05295425b/" target="_blank">
+          <span>💼</span> linkedin.com/in/job-jason-chua
+        </a>
+        <a href="https://github.com/AwesomeJ0b" target="_blank">
+          <span>🐙</span> github.com/AwesomeJ0b
+        </a>
+        <a href="https://www.facebook.com/jobchua/" target="_blank">
+          <span>📘</span> facebook.com/jobchua
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <p class="footer-text">&copy; 2026 <span>Job Jason Chua</span> &nbsp;·&nbsp; CMSC 207 Mini-Project</p>
+
+  <!-- JavaScript -->
+  <script>
+    var facts = [
+      "I started my career as an Admin Officer at an engineering firm before moving into data.",
+      "I am a licensed Registered Electrical Engineer here in the Philippines.",
+      "I have certifications in Power BI, Python, Data Science, and Lean Six Sigma!",
+      "I enjoy boxing as a way to stay disciplined and clear my head.",
+      "I got my engineering degree from the University of Santo Tomas.",
+      "I am currently studying Computer Science at the University of the Philippines.",
+      "My music taste ranges from OPM and acoustic all the way to jazz and pop.",
+      "I love trying new food — it is one of my favorite ways to spend a day off."
+    ];
+
+    var lastIndex = -1;
+
+    function showFact() {
+      var index;
+
+      do {
+        index = Math.floor(Math.random() * facts.length);
+      } while (index === lastIndex);
+
+      lastIndex = index;
+
+      document.getElementById("fact-text").textContent = facts[index];
+      document.getElementById("fact-btn").textContent = "Show Another Fact";
+    }
+  </script>
+
+</body>
+</html>
