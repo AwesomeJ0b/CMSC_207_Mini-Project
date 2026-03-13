@@ -8,7 +8,7 @@ This is a web site that serves as my personal profile that covers my background,
 
 ## How to View
 
-Visit the live site here: [Live Demo](https://awesomej0b.github.io/cmsc207-mini-project)
+Visit the live site here: https://awesomej0b.github.io/CMSC_207_Mini-Project/
 
 ## Features
 
