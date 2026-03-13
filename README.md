@@ -1,29 +1,25 @@
-# CMSC 207 Mini-Project: Personal Web Profile
+# cmsc207-mini-project
 
-A personal web profile built as part of the CMSC 207 course requirement.
+A personal web profile page built for CMSC 207 Web Development class at UPOU.
 
-## About the Project
+## Overview
 
-This is a single-page personal website created using only HTML, CSS, and JavaScript — no frameworks. It serves as my first hands-on project in web development.
-
-## Features
-
-- Personal introduction and background
-- Hobbies and interests section
-- Fun fact button powered by JavaScript
-- Contact information
-- Responsive layout for mobile and desktop
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
+This is a web site that serves as my personal profile that covers my background, interests, and contact info. The technologies used are HTML, CSS, and JavaScript. 
 
 ## How to View
 
 Visit the live site here: [Live Demo](https://awesomej0b.github.io/cmsc207-mini-project)
 
+## Features
+
+Open index.html in any browser. The page includes:
+
+- A hero section with a short bio
+- A about section with my background
+- A hobbies section
+- A fun fact button: click it to view random facts
+- A contact section with links to my email, LinkedIn, GitHub, and Facebook
+
 ## Author
 
-Job Jason Chua — CMSC 207, University of the Philippines
+Job Jason Chua - CMSC 207, University of the Philippines
